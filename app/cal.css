@@ -1,0 +1,24 @@
+/* Calendar (parent + teacher pages) */
+.cal{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.cal-head b{font-weight:900;text-transform:capitalize;font-size:1.15rem}
+.cal-nav{width:38px;height:38px;border-radius:12px;border:1px solid var(--line);background:var(--card);display:grid;place-items:center;cursor:pointer;color:var(--text)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.cal-wd{font-size:.75rem;font-weight:800;text-align:center;color:var(--muted);padding:4px 0}
+.cal-day{aspect-ratio:1;border-radius:14px;border:1px solid var(--line);background:var(--bg);color:var(--text);font-weight:800;font-size:.95rem;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:0;min-width:0}
+.cal-day:hover{border-color:var(--primary)}
+.cal-day.today{outline:2px solid #4DABF7;outline-offset:-2px}
+.cal-day.ev{background:color-mix(in srgb,#FFD43B 26%,var(--bg))}
+.cal-day.sel{background:#FFD43B;color:#2B2140;border-color:#FFD43B}
+.cal-day .dot{font-size:.7rem;line-height:1}
+.cal-sub{font-weight:900;font-size:1rem;margin-bottom:10px}
+.cal-list{display:flex;flex-direction:column;gap:10px;max-height:420px;overflow:auto;padding-right:4px}
+.cal-ev{display:flex;gap:12px;padding:12px;border-radius:18px;background:var(--bg);border:1px solid var(--line)}
+.cal-ev .em{font-size:1.8rem;line-height:1}
+.cal-ev b{font-weight:900;display:block}
+.cal-ev small{color:var(--muted);line-height:1.45;display:block;margin-top:3px}
+.cal-tag{display:inline-block;font-size:.7rem;font-weight:800;padding:2px 8px;border-radius:999px;background:#CFF7DA;color:#1E5A33;margin-left:6px;vertical-align:middle}
+.cal-tag.kids{background:#FFD6E4;color:#7A1F3D}
+.cal-tag.custom{background:#CDEBFF;color:#1B4C78}
+@media (max-width:980px){.cal{grid-template-columns:1fr}}
+@media (max-width:520px){.cal-day{font-size:.85rem}}
